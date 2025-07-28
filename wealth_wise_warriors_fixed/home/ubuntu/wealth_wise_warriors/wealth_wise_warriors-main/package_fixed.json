@@ -1,0 +1,32 @@
+{
+  "name": "wealth-wise-warriors",
+  "version": "1.0.0",
+  "description": "The only financial literacy platform designed by Gen Z, for Gen Z",
+  "main": "index.html",
+  "dependencies": {
+    "@dhiwise/component-tagger": "^1.0.10",
+    "@tailwindcss/forms": "^0.5.7",
+    "tailwindcss-animate": "^1.0.7",
+    "tailwindcss-elevation": "^2.0.0",
+    "tailwindcss-fluid-type": "^2.0.7"
+  },
+  "scripts": {
+    "build": "npm run build:css",
+    "build:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --minify",
+    "watch:css": "npx @dhiwise/component-tagger && npx tailwindcss -i ./css/tailwind.css -o ./css/main.css --watch",
+    "dev": "npm run watch:css",
+    "start": "npx http-server . -p 3000"
+  },
+  "author": "Wealth-Wise Warriors Team",
+  "license": "MIT",
+  "devDependencies": {
+    "@tailwindcss/aspect-ratio": "^0.4.2",
+    "@tailwindcss/container-queries": "^0.1.1",
+    "@tailwindcss/line-clamp": "^0.1.0",
+    "@tailwindcss/typography": "^0.5.16",
+    "caniuse-lite": "^1.0.30001727",
+    "http-server": "^14.1.1",
+    "tailwindcss": "^3.4.17"
+  }
+}
+

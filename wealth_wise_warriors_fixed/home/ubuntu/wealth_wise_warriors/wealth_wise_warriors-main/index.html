@@ -1,0 +1,591 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Wealth-Wise Warriors - Level Up Your Money Game</title>
+    <link rel="stylesheet" href="./css/main.css" />
+    <meta name="description" content="The only financial literacy platform designed by Gen Z, for Gen Z. Transform boring money lessons into addictive gameplay and master real-world financial skills." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<script type="module" src="https://static.rocket.new/rocket-web.js?_cfg=https%3A%2F%2Fwealthwis2710back.builtwithrocket.new&_be=https%3A%2F%2Fapplication.rocket.new&_v=0.1.6"></script>
+</head>
+<body class="bg-background text-text-primary font-dm-sans overflow-x-hidden">
+    <!-- Navigation -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-background/90 backdrop-blur-md border-b border-card">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex items-center justify-between h-16">
+                <!-- Logo -->
+                <div class="flex items-center space-x-2">
+                    <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                        <path d="M16 2L20 10H28L22 16L24 24L16 20L8 24L10 16L4 10H12L16 2Z"/>
+                    </svg>
+                    <span class="text-xl font-poppins font-bold text-gradient-gaming">Wealth-Wise Warriors</span>
+                </div>
+                
+                <!-- Desktop Navigation -->
+                <div class="hidden md:flex items-center space-x-8">
+                    <a href="#game-modules" class="text-text-secondary hover:text-accent transition-colors duration-250">Game Modules</a>
+                    <a href="#how-it-works" class="text-text-secondary hover:text-accent transition-colors duration-250">How It Works</a>
+                    <a href="#team" class="text-text-secondary hover:text-accent transition-colors duration-250">Team</a>
+                    <button class="btn-gaming text-sm py-2 px-4" onclick="startDemo()">Play Demo 🎮</button>
+                </div>
+                
+                <!-- Mobile Menu Button -->
+                <button class="md:hidden text-text-primary" onclick="toggleMobileMenu()">
+                    <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 6h16M4 12h16M4 18h16"/>
+                    </svg>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div id="mobile-menu" class="hidden md:hidden bg-surface border-t border-card">
+            <div class="px-4 py-4 space-y-4">
+                <a href="#game-modules" class="block text-text-secondary hover:text-accent transition-colors duration-250">Game Modules</a>
+                <a href="#how-it-works" class="block text-text-secondary hover:text-accent transition-colors duration-250">How It Works</a>
+                <a href="#team" class="block text-text-secondary hover:text-accent transition-colors duration-250">Team</a>
+                <button class="btn-gaming w-full text-sm py-2 px-4" onclick="startDemo()">Play Demo 🎮</button>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-screen flex items-center justify-center overflow-hidden pt-16">
+        <!-- Animated Background -->
+        <div class="absolute inset-0 bg-gaming-gradient opacity-20"></div>
+        <div class="absolute inset-0">
+            <div class="absolute top-20 left-10 w-16 h-16 bg-accent/20 rounded-full animate-bounce" style="animation-delay: 0s;"></div>
+            <div class="absolute top-40 right-20 w-12 h-12 bg-secondary/20 rounded-full animate-bounce" style="animation-delay: 1s;"></div>
+            <div class="absolute bottom-40 left-20 w-20 h-20 bg-primary/20 rounded-full animate-bounce" style="animation-delay: 2s;"></div>
+            <div class="absolute bottom-20 right-10 w-14 h-14 bg-accent/20 rounded-full animate-bounce" style="animation-delay: 0.5s;"></div>
+        </div>
+        
+        <div class="relative z-10 max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <!-- Main Headline with Typewriter Effect -->
+            <h1 class="text-4xl sm:text-5xl lg:text-7xl font-poppins font-extrabold mb-6">
+                <span class="text-gradient-gaming">Level Up Your</span><br />
+                <span class="text-white" id="typewriter">Money Game</span>
+            </h1>
+            
+            <!-- Subheadline -->
+            <p class="text-lg sm:text-xl lg:text-2xl text-text-secondary max-w-4xl mx-auto mb-8 leading-relaxed">
+                The only financial literacy platform designed by Gen Z, for Gen Z - transform boring money lessons into addictive gameplay 🎯
+            </p>
+            
+            <!-- CTA Buttons -->
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-12">
+                <button class="btn-gaming-pulse text-lg px-8 py-4 flex items-center gap-3" onclick="startDemo()">
+                    🎮 Play Free Demo Now
+                </button>
+                <button class="bg-surface border border-card text-text-primary px-8 py-4 rounded-xl hover:bg-surface-light transition-all duration-250 flex items-center gap-3" onclick="watchPreview()">
+                    ▶️ Watch 60-Second Preview
+                </button>
+            </div>
+            
+            <!-- Trust Bar -->
+            <div class="grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-3xl mx-auto">
+                <div class="text-center">
+                    <div class="text-2xl font-poppins font-bold text-accent" id="active-players">47,832</div>
+                    <div class="text-text-muted text-sm">Active Players</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-poppins font-bold text-secondary">+73%</div>
+                    <div class="text-text-muted text-sm">Confidence Boost</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-2xl font-poppins font-bold text-primary">150+</div>
+                    <div class="text-text-muted text-sm">Partner Schools</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Problem Section -->
+    <section class="py-20 bg-surface/50">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-6">
+                    The Gen Z Money <span class="text-gradient-gaming">Crisis</span> 📉
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Traditional financial education isn't working for our generation. Here's the reality check:
+                </p>
+            </div>
+            
+            <!-- Interactive Statistics -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-12">
+                <div class="bg-surface border border-card rounded-2xl p-6 hover:shadow-glow transition-all duration-250 cursor-pointer" onclick="showStatDetail('confidence')">
+                    <div class="text-4xl font-poppins font-bold text-error mb-2">67%</div>
+                    <div class="text-text-secondary">Lack financial confidence</div>
+                    <div class="text-accent text-sm mt-2">👆 Tap for details</div>
+                </div>
+                <div class="bg-surface border border-card rounded-2xl p-6 hover:shadow-glow transition-all duration-250 cursor-pointer" onclick="showStatDetail('debt')">
+                    <div class="text-4xl font-poppins font-bold text-warning mb-2">$4.2K</div>
+                    <div class="text-text-secondary">Average credit card debt</div>
+                    <div class="text-accent text-sm mt-2">👆 Tap for details</div>
+                </div>
+                <div class="bg-surface border border-card rounded-2xl p-6 hover:shadow-glow transition-all duration-250 cursor-pointer" onclick="showStatDetail('impulse')">
+                    <div class="text-4xl font-poppins font-bold text-error mb-2">89%</div>
+                    <div class="text-text-secondary">Make impulse purchases</div>
+                    <div class="text-accent text-sm mt-2">👆 Tap for details</div>
+                </div>
+                <div class="bg-surface border border-card rounded-2xl p-6 hover:shadow-glow transition-all duration-250 cursor-pointer" onclick="showStatDetail('education')">
+                    <div class="text-4xl font-poppins font-bold text-error mb-2">23%</div>
+                    <div class="text-text-secondary">Had financial education</div>
+                    <div class="text-accent text-sm mt-2">👆 Tap for details</div>
+                </div>
+            </div>
+            
+            <!-- Stat Detail Modal -->
+            <div id="stat-modal" class="hidden fixed inset-0 z-50 bg-background/80 backdrop-blur-sm flex items-center justify-center p-4">
+                <div class="bg-surface border border-card rounded-2xl p-8 max-w-md w-full">
+                    <div class="flex justify-between items-center mb-4">
+                        <h3 class="text-xl font-poppins font-bold" id="modal-title">Statistic Details</h3>
+                        <button onclick="closeStatModal()" class="text-text-muted hover:text-text-primary">✕</button>
+                    </div>
+                    <div id="modal-content" class="text-text-secondary"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Game Modules Section -->
+    <section id="game-modules" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-6">
+                    Five Epic <span class="text-gradient-gaming">Game Worlds</span> 🌍
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    Master real-world financial skills through immersive gameplay designed specifically for Gen Z learning styles.
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- FOMO Festival -->
+                <div class="group relative bg-surface border border-card rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 cursor-pointer" onclick="exploreModule('fomo')">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1533174072545-7a4b6ad7a6c3?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="FOMO Festival Game Module" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.pexels.com/photos/1181467/pexels-photo-1181467.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-accent-gradient opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-2xl mb-2">🎪</div>
+                                <div class="font-poppins font-bold">Explore FOMO Festival</div>
+                                <div class="text-sm opacity-90">Learn to resist social pressure</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-poppins font-bold mb-3 text-accent">🎪 FOMO Festival</h3>
+                        <p class="text-text-secondary mb-4">Navigate social pressure scenarios and learn to make smart spending decisions when everyone else is splurging.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-muted">Social Spending • Peer Pressure</span>
+                            <span class="text-accent">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Impulse Island -->
+                <div class="group relative bg-surface border border-card rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 cursor-pointer" onclick="exploreModule('impulse')">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.pixabay.com/photo-2016/11/29/05/45/astronomy-1867616_1280.jpg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Impulse Island Game Module" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1559827260-dc66d52bef19?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-gaming-gradient opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-2xl mb-2">🏝️</div>
+                                <div class="font-poppins font-bold">Explore Impulse Island</div>
+                                <div class="text-sm opacity-90">Master impulse control</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-poppins font-bold mb-3 text-secondary">🏝️ Impulse Island</h3>
+                        <p class="text-text-secondary mb-4">Battle impulse buying monsters and develop strategies to pause, think, and make intentional purchase decisions.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-muted">Impulse Control • Decision Making</span>
+                            <span class="text-secondary">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Save Garden -->
+                <div class="group relative bg-surface border border-card rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 cursor-pointer" onclick="exploreModule('save')">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.pexels.com/photos/1072179/pexels-photo-1072179.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" alt="Save Garden Game Module" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1416879595882-3373a0480b5b?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-accent-gradient opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-2xl mb-2">🌱</div>
+                                <div class="font-poppins font-bold">Explore Save Garden</div>
+                                <div class="text-sm opacity-90">Grow your savings habits</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-poppins font-bold mb-3 text-primary">🌱 Save Garden</h3>
+                        <p class="text-text-secondary mb-4">Plant and nurture your financial goals while learning compound interest through interactive garden growth mechanics.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-muted">Saving Goals • Compound Interest</span>
+                            <span class="text-primary">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Budget Boss -->
+                <div class="group relative bg-surface border border-card rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 cursor-pointer" onclick="exploreModule('budget')">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="./assets/images/20250724_1128_Debt_and_Budget_Scenes_simple_compose_01k0xrpab3fe7vaqnynn3rc2rj-1753345849192.png" alt="Budget Boss Game Module" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.unsplash.com/photo-1554224155-6726b3ff858f?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-warning-gradient opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-2xl mb-2">💰</div>
+                                <div class="font-poppins font-bold">Explore Budget Boss</div>
+                                <div class="text-sm opacity-90">Master budget management</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-poppins font-bold mb-3 text-warning">💰 Budget Boss</h3>
+                        <p class="text-text-secondary mb-4">Take on the role of a financial manager and learn to allocate resources, track expenses, and optimize spending patterns.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-muted">Budgeting • Expense Tracking</span>
+                            <span class="text-warning">→</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Credit Quest -->
+                <div class="group relative bg-surface border border-card rounded-2xl overflow-hidden hover:shadow-glow transition-all duration-500 cursor-pointer" onclick="exploreModule('credit')">
+                    <div class="aspect-video relative overflow-hidden">
+                        <img src="https://images.unsplash.com/photo-1556742049-0cfed4f6a45d?q=80&w=2940&auto=format&fit=crop&ixlib=rb-4.0.3" alt="Credit Quest Game Module" class="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500" onerror="this.src='https://images.pexels.com/photos/259027/pexels-photo-259027.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2'; this.onerror=null;" />
+                        <div class="absolute inset-0 bg-error-gradient opacity-0 group-hover:opacity-80 transition-opacity duration-500 flex items-center justify-center">
+                            <div class="text-center text-white">
+                                <div class="text-2xl mb-2">🏆</div>
+                                <div class="font-poppins font-bold">Explore Credit Quest</div>
+                                <div class="text-sm opacity-90">Build your credit score</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="p-6">
+                        <h3 class="text-xl font-poppins font-bold mb-3 text-error">🏆 Credit Quest</h3>
+                        <p class="text-text-secondary mb-4">Embark on a journey to build and maintain excellent credit through strategic decision-making and responsible habits.</p>
+                        <div class="flex items-center justify-between">
+                            <span class="text-sm text-text-muted">Credit Building • Financial Responsibility</span>
+                            <span class="text-error">→</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- How It Works Section -->
+    <section id="how-it-works" class="py-20 bg-surface/30">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-6">
+                    How <span class="text-gradient-gaming">Gaming</span> Transforms Learning 🧠
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    We've cracked the code on making financial education actually stick. Here's our secret sauce:
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 mb-16">
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-accent/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🎯</span>
+                    </div>
+                    <h3 class="text-lg font-poppins font-bold mb-2 text-accent">Scenario-Based Learning</h3>
+                    <p class="text-text-secondary text-sm">Real-world financial situations disguised as engaging game scenarios</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-secondary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">🏆</span>
+                    </div>
+                    <h3 class="text-lg font-poppins font-bold mb-2 text-secondary">Achievement System</h3>
+                    <p class="text-text-secondary text-sm">Unlock badges and level up as you master financial concepts</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-primary/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">📊</span>
+                    </div>
+                    <h3 class="text-lg font-poppins font-bold mb-2 text-primary">Progress Tracking</h3>
+                    <p class="text-text-secondary text-sm">Visual dashboards show your financial literacy growth over time</p>
+                </div>
+                <div class="text-center">
+                    <div class="w-16 h-16 bg-warning/20 rounded-full flex items-center justify-center mx-auto mb-4">
+                        <span class="text-2xl">👥</span>
+                    </div>
+                    <h3 class="text-lg font-poppins font-bold mb-2 text-warning">Social Learning</h3>
+                    <p class="text-text-secondary text-sm">Compete with friends and share achievements on social platforms</p>
+                </div>
+            </div>
+            
+            <!-- Interactive Demo Preview -->
+            <div class="bg-surface border border-card rounded-2xl p-8 text-center">
+                <h3 class="text-2xl font-poppins font-bold mb-4">Ready to Experience the Magic? ✨</h3>
+                <p class="text-text-secondary mb-6">Try our 5-minute demo and see why 89% of users say they finally "get" money management.</p>
+                <button class="btn-gaming-pulse text-lg px-8 py-4" onclick="startDemo()">🎮 Start Interactive Demo</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Team Section -->
+    <section id="team" class="py-20">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-6">
+                    Meet the <span class="text-gradient-gaming">Gen Z Founders</span> 👋
+                </h2>
+                <p class="text-xl text-text-secondary max-w-3xl mx-auto">
+                    We're not just building for Gen Z - we ARE Gen Z. Here's the team that's revolutionizing financial education:
+                </p>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <!-- Team Member 1 -->
+                <div class="bg-surface border border-card rounded-2xl p-6 text-center hover:shadow-glow transition-all duration-250">
+                    <div class="w-24 h-24 bg-accent/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <img src="./assets/images/IMG_1594-1753344290450.JPG" alt="Team Member" class="w-full h-full object-cover rounded-full" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
+                        <span class="text-3xl hidden">👨‍💻</span>
+                    </div>
+                    <h3 class="text-xl font-poppins font-bold mb-2">Alex Chen</h3>
+                    <p class="text-accent text-sm mb-3">Co-Founder & CEO</p>
+                    <p class="text-text-secondary text-sm">Former fintech intern who got tired of boring financial apps. Passionate about making money management as addictive as TikTok.</p>
+                </div>
+                
+                <!-- Team Member 2 -->
+                <div class="bg-surface border border-card rounded-2xl p-6 text-center hover:shadow-glow transition-all duration-250">
+                    <div class="w-24 h-24 bg-secondary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-3xl">👩‍🎨</span>
+                    </div>
+                    <h3 class="text-xl font-poppins font-bold mb-2">Maya Rodriguez</h3>
+                    <p class="text-secondary text-sm mb-3">Co-Founder & CPO</p>
+                    <p class="text-text-secondary text-sm">Game design graduate who believes learning should never be boring. Expert in turning complex concepts into engaging experiences.</p>
+                </div>
+                
+                <!-- Team Member 3 -->
+                <div class="bg-surface border border-card rounded-2xl p-6 text-center hover:shadow-glow transition-all duration-250">
+                    <div class="w-24 h-24 bg-primary/20 rounded-full mx-auto mb-4 flex items-center justify-center">
+                        <span class="text-3xl">👨‍💼</span>
+                    </div>
+                    <h3 class="text-xl font-poppins font-bold mb-2">Jordan Kim</h3>
+                    <p class="text-primary text-sm mb-3">Co-Founder & CTO</p>
+                    <p class="text-text-secondary text-sm">Full-stack developer and gaming enthusiast. Built the entire platform while procrastinating on his computer science homework.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-gaming-gradient">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+            <h2 class="text-3xl sm:text-4xl lg:text-5xl font-poppins font-bold mb-6 text-white">
+                Ready to Level Up Your Money Game? 🚀
+            </h2>
+            <p class="text-xl text-white/90 mb-8 max-w-2xl mx-auto">
+                Join thousands of Gen Z learners who've already transformed their financial future through gaming.
+            </p>
+            
+            <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+                <button class="bg-white text-background px-8 py-4 rounded-xl font-poppins font-bold hover:bg-white/90 transition-all duration-250 flex items-center gap-3" onclick="startDemo()">
+                    🎮 Play Free Demo Now
+                </button>
+                <button class="border-2 border-white text-white px-8 py-4 rounded-xl font-poppins font-bold hover:bg-white hover:text-background transition-all duration-250" onclick="joinWaitlist()">
+                    📧 Join Beta Waitlist
+                </button>
+            </div>
+            
+            <p class="text-white/70 text-sm">
+                No credit card required • 5-minute setup • Available on all devices
+            </p>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-background border-t border-card py-12">
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <!-- Logo and Description -->
+                <div class="md:col-span-2">
+                    <div class="flex items-center space-x-2 mb-4">
+                        <svg class="w-8 h-8 text-accent" viewBox="0 0 32 32" fill="currentColor">
+                            <path d="M16 2L20 10H28L22 16L24 24L16 20L8 24L10 16L4 10H12L16 2Z"/>
+                        </svg>
+                        <span class="text-xl font-poppins font-bold text-gradient-gaming">Wealth-Wise Warriors</span>
+                    </div>
+                    <p class="text-text-secondary mb-4 max-w-md">
+                        The only financial literacy platform designed by Gen Z, for Gen Z. Transform boring money lessons into addictive gameplay.
+                    </p>
+                    <div class="flex space-x-4">
+                        <a href="#" class="text-text-muted hover:text-accent transition-colors duration-250">📧</a>
+                        <a href="#" class="text-text-muted hover:text-accent transition-colors duration-250">📱</a>
+                        <a href="#" class="text-text-muted hover:text-accent transition-colors duration-250">💬</a>
+                    </div>
+                </div>
+                
+                <!-- Quick Links -->
+                <div>
+                    <h4 class="font-poppins font-bold mb-4">Quick Links</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#game-modules" class="text-text-secondary hover:text-accent transition-colors duration-250">Game Modules</a></li>
+                        <li><a href="#how-it-works" class="text-text-secondary hover:text-accent transition-colors duration-250">How It Works</a></li>
+                        <li><a href="#team" class="text-text-secondary hover:text-accent transition-colors duration-250">Team</a></li>
+                        <li><a href="#" class="text-text-secondary hover:text-accent transition-colors duration-250">Blog</a></li>
+                    </ul>
+                </div>
+                
+                <!-- Support -->
+                <div>
+                    <h4 class="font-poppins font-bold mb-4">Support</h4>
+                    <ul class="space-y-2">
+                        <li><a href="#" class="text-text-secondary hover:text-accent transition-colors duration-250">Help Center</a></li>
+                        <li><a href="#" class="text-text-secondary hover:text-accent transition-colors duration-250">Privacy Policy</a></li>
+                        <li><a href="#" class="text-text-secondary hover:text-accent transition-colors duration-250">Terms of Service</a></li>
+                        <li><a href="#" class="text-text-secondary hover:text-accent transition-colors duration-250">Contact Us</a></li>
+                    </ul>
+                </div>
+            </div>
+            
+            <div class="border-t border-card mt-8 pt-8 text-center">
+                <p class="text-text-muted text-sm">
+                    © 2024 Wealth-Wise Warriors. Made with 💜 by Gen Z, for Gen Z.
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- JavaScript -->
+    <script>
+        // Mobile menu toggle
+        function toggleMobileMenu() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        }
+
+        // Typewriter effect
+        const words = ['Money Game', 'Financial Future', 'Wealth Journey', 'Money Skills'];
+        let wordIndex = 0;
+        let charIndex = 0;
+        let isDeleting = false;
+
+        function typeWriter() {
+            const typewriterElement = document.getElementById('typewriter');
+            const currentWord = words[wordIndex];
+            
+            if (isDeleting) {
+                typewriterElement.textContent = currentWord.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typewriterElement.textContent = currentWord.substring(0, charIndex + 1);
+                charIndex++;
+            }
+
+            if (!isDeleting && charIndex === currentWord.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                wordIndex = (wordIndex + 1) % words.length;
+            }
+
+            setTimeout(typeWriter, isDeleting ? 50 : 100);
+        }
+
+        // Start typewriter effect
+        typeWriter();
+
+        // Animate active players counter
+        function animateCounter() {
+            const counter = document.getElementById('active-players');
+            const target = 47832;
+            let current = 45000;
+            const increment = 50;
+            const timer = setInterval(() => {
+                current += increment;
+                counter.textContent = current.toLocaleString();
+                if (current >= target) {
+                    counter.textContent = target.toLocaleString();
+                    clearInterval(timer);
+                }
+            }, 50);
+        }
+
+        // Start counter animation when page loads
+        window.addEventListener('load', animateCounter);
+
+        // Stat detail modal functions
+        const statDetails = {
+            confidence: {
+                title: "Financial Confidence Crisis",
+                content: "67% of Gen Z report feeling anxious or overwhelmed when making financial decisions. This lack of confidence leads to poor money choices and missed opportunities for wealth building."
+            },
+            debt: {
+                title: "Credit Card Debt Reality",
+                content: "$4,200 is the average credit card debt for Gen Z adults. High interest rates and minimum payments trap young people in cycles of debt that can last decades."
+            },
+            impulse: {
+                title: "Impulse Buying Epidemic",
+                content: "89% of Gen Z make impulse purchases at least once a month, often triggered by social media ads and FOMO. This behavior prevents effective saving and budgeting."
+            },
+            education: {
+                title: "Education Gap",
+                content: "Only 23% of Gen Z received formal financial education in school. Traditional methods are outdated and don't resonate with digital-native learning preferences."
+            }
+        };
+
+        function showStatDetail(stat) {
+            const modal = document.getElementById('stat-modal');
+            const title = document.getElementById('modal-title');
+            const content = document.getElementById('modal-content');
+            
+            title.textContent = statDetails[stat].title;
+            content.textContent = statDetails[stat].content;
+            modal.classList.remove('hidden');
+        }
+
+        function closeStatModal() {
+            document.getElementById('stat-modal').classList.add('hidden');
+        }
+
+        // Game module exploration
+        function exploreModule(module) {
+            alert(`🎮 ${module.toUpperCase()} module coming soon! Join our beta waitlist to be the first to play.`);
+        }
+
+        // Demo and preview functions
+        function startDemo() {
+            alert('🎮 Demo launching soon! Join our waitlist to be notified when it\'s ready.');
+        }
+
+        function watchPreview() {
+            alert('📹 Preview video coming soon! Follow us on social media for updates.');
+        }
+
+        function joinWaitlist() {
+            alert('📧 Waitlist signup coming soon! Check back in a few days.');
+        }
+
+        // Smooth scrolling for anchor links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Close mobile menu when clicking on links
+        document.querySelectorAll('#mobile-menu a').forEach(link => {
+            link.addEventListener('click', () => {
+                document.getElementById('mobile-menu').classList.add('hidden');
+            });
+        });
+    </script>
+<script id="dhws-dataInjector" src="./public/dhws-data-injector.js"></script>
+</body>
+</html>
+
